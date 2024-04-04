@@ -13,16 +13,16 @@ After migrating to PingOne Cloud from Ping Federate + PingID, the imported Activ
 
 ## PingOne configuration
 This assumes you've already created your PingOne Cloud environment and established an integration to your existing PingID environment.
-## Gateway
+### Gateway
 You will need to create an LDAP Gateway and User Type (Lookup) to identify the values to set for the gateway and user_type values to set in the script.
-## Authentication Token
+### Authentication Token
 Link to Ping Identity's documention: https://docs.pingidentity.com/r/en-us/pingone/pingonemfa_creating_worker_application_access_token
 
 Summary of Steps:
 1. Create a new Application with the "Worker" Application Type.
 2. Under the Application Roles assign the "Identity Data Admin" role.
 3. On the Application's Configuration tab, at the bottom of the page, click the "Get Access Token" button to retrieve your temporary access token. Note that Access Tokens expire after 1 hour.
-## Active Directory Users CSV
+### Active Directory Users CSV
 The scripts depends on a CSV of Active Directory user attributes to set the PingOne user Correlation Attributes. To create a CSV with the properties used in this script, execute the following powershell command from a Domain Controller or other domain joined system with the Active Directory Powershell module installed.
 `get-aduser -filter * -Properties * | select objectGUID, objectSid, DistinguishedName, sAMAccountName, mail, UserPrincipalName | Export-Csv -Path 'ad_users.csv'`
 
