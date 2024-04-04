@@ -1,0 +1,2 @@
+"objectGUID","objectSid","DistinguishedName","sAMAccountName","mail","UserPrincipalName"
+"e0c12033-f50b-42c8-8ccb-deb866e9b12a","S-1-5-21-2099920240-292953343-169542040-23290","CN=sample-user,OU=Users,DC=sample-domain,DC=com","sample-user",,"sample-user@sample-domain.com"

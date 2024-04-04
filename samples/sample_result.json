@@ -1,0 +1,65 @@
+{
+    "_links" : {
+      "next" : {
+        "href" : "https://api.pingone.com/v1/environments/<env_id>/users?limit=1&cursor=<session_id>"
+      },
+      "self" : {
+        "href" : "https://api.pingone.com/v1/environments/<env_id>/users?limit=1"
+      }
+    },
+    "_embedded" : {
+      "users" : [ {
+        "_links" : {
+          "password" : {
+            "href" : "https://api.pingone.com/v1/environments/<env_id>/users/<user_id>/password"
+          },
+          "password.set" : {
+            "href" : "https://api.pingone.com/v1/environments/<env_id>/users/<user_id>/password"
+          },
+          "account.sendVerificationCode" : {
+            "href" : "https://api.pingone.com/v1/environments/<env_id>/users/<user_id>"
+          },
+          "linkedAccounts" : {
+            "href" : "https://api.pingone.com/v1/environments/<env_id>/users/<user_id>/linkedAccounts"
+          },
+          "self" : {
+            "href" : "https://api.pingone.com/v1/environments/<env_id>/users/<user_id>"
+          },
+          "password.check" : {
+            "href" : "https://api.pingone.com/v1/environments/<env_id>/users/<user_id>/password"
+          },
+          "password.reset" : {
+            "href" : "https://api.pingone.com/v1/environments/<env_id>/users/<user_id>/password"
+          },
+          "password.recover" : {
+            "href" : "https://api.pingone.com/v1/environments/<env_id>/users/<user_id>/password"
+          }
+        },
+        "id" : "<user_id>",
+        "environment" : {
+          "id" : "<env_id>"
+        },
+        "account" : {
+          "canAuthenticate" : true,
+          "status" : "OK"
+        },
+        "createdAt" : "2024-03-15T19:10:54.238Z",
+        "enabled" : true,
+        "identityProvider" : {
+          "type" : "PING_ONE"
+        },
+        "lifecycle" : {
+          "status" : "ACCOUNT_OK"
+        },
+        "mfaEnabled" : true,
+        "population" : {
+          "id" : "02becd45-1fc0-4a49-a8da-02d71874376f"
+        },
+        "updatedAt" : "2024-03-15T19:10:54.238Z",
+        "username" : "<username>",
+        "verifyStatus" : "NOT_INITIATED"
+      } ]
+    },
+    "count" : 1958,
+    "size" : 1
+}
